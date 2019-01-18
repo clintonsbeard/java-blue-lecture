@@ -1,5 +1,7 @@
 package com.techelevator;
 
+import java.util.Scanner;
+
 public class ScannerExamples {
 
 	public static void main(String[] args) {
@@ -15,7 +17,9 @@ public class ScannerExamples {
 		 * we need to pass the System.in inputStream.  
 		 */
 		/* ADD CODE TO CREATE A SCANNER AND ASK THE USER THEIR NAME */
-
+		
+		Scanner in = new Scanner(System.in);
+		System.out.println("What is your name?");
 		
 		/* 
 		 * We use the Scanner nextLine() method to get the input from the user as
@@ -23,7 +27,8 @@ public class ScannerExamples {
 		 */
 		/* ADD CODE TO GET THE USERS NAME AND DISPLAY IT */
 
-		
+		String username = in.nextLine();
+		System.out.println("You said your name is " + username);
 		
 		/*
 		 * We can also use other methods of scanner like nextInt() to get input from the user
@@ -35,11 +40,16 @@ public class ScannerExamples {
 		 */
 		/* ADD CODE TO GET THE NEXT USERS NUMBER AND DISPLAY IT */
 
-		
+		System.out.print("Enter a number: ");
+		int userNumber = in.nextInt();
+		in.nextLine();
+		System.out.println("Your number is " + userNumber);
 		
 		// We can also get a number as a String and then parse it using the desired datatypes parse function
 		/* ADD CODE TO GET THE USER DOLLAR AMOUNT */
 
+		System.out.print("Enter a dollar amount: ");
+		String dollarString = in.nextLine();
 		
 		
 		/*
@@ -54,10 +64,14 @@ public class ScannerExamples {
 		 *
 		 */
 		/* ADD CODE TO PARSE THE USER ENTERED DOUBLE */
-
+		
+		double amount = Double.parseDouble(dollarString);
+		double tax = .075;
+		double total = amount + (amount * tax);
 
 		/* ADD CODE TO ADD TAX TO THE AMOUNT AND DISPLAY IT */
 
+		System.out.println("Your total is: " + total);
 		
 		/*
 		 * If you want to display formatted values we can use the printf function with a formatter.
@@ -85,7 +99,23 @@ public class ScannerExamples {
 		 * 	Record      $5.76  $0.43  $6.19 
 		 */
 		
+		System.out.println();
+		System.out.printf("%-10s", "Item");
+		System.out.printf("  %-2s ", "Price");
+		System.out.printf("   %-2s ", "Tax");
+		System.out.printf("   %-2s ", "Total");
+		System.out.println("\n---------------------------------");
+
+		System.out.printf("%-10s", "Book");
+		System.out.printf(" $%-4.2f ", amount);
+		System.out.printf("  $%-4.2f ", tax);
+		System.out.printf(" $%-4.2f ", total);
+		System.out.println();
 		
+		System.out.printf("%-10s", "Record");
+		System.out.printf(" $%-4.2f ", 5.76);
+		System.out.printf("   $%-4.2f ", 0.43);
+		System.out.printf(" $%-4.2f ", 6.19);
 		
 	}
 
