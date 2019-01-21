@@ -27,9 +27,14 @@ public class Lecture {
     */
     
     public int returnLastElement() {
+<<<<<<< HEAD
     	
         int[] portNumbers = {80,8080,443};
         return portNumbers[portNumbers.length - 1];
+=======
+        int[] portNumbers = {80,8080,443 };
+        return portNumbers[2];
+>>>>>>> 8baf4ef6f726ba34c25c1b2bc4a05892bfc87d4d
     }
 
     /*
@@ -37,7 +42,10 @@ public class Lecture {
     */
     
     public int returnFirstElementOfParam(int[] passedInArray) {
+<<<<<<< HEAD
     	
+=======
+>>>>>>> 8baf4ef6f726ba34c25c1b2bc4a05892bfc87d4d
         return passedInArray[0];
     }
 
@@ -46,8 +54,12 @@ public class Lecture {
     */
     
     public int returnLastElementOfParam(int[] passedInArray) {
+<<<<<<< HEAD
     	
         return passedInArray[passedInArray.length - 1];
+=======
+        return passedInArray[ passedInArray.length - 1 ];
+>>>>>>> 8baf4ef6f726ba34c25c1b2bc4a05892bfc87d4d
     }
     
     /*
@@ -55,10 +67,17 @@ public class Lecture {
     */
     
     public int returnVariableFromBlock(int number) {
+<<<<<<< HEAD
     	int result;
         { // A new block with scoped variables
 
            result = number * 5;
+=======
+    	
+        { // A new block with scoped variables
+
+            number = number * 5;
+>>>>>>> 8baf4ef6f726ba34c25c1b2bc4a05892bfc87d4d
 
         } // the result variable disappears here
 
