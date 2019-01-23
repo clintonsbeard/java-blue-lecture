@@ -49,7 +49,24 @@ public class ClassExamples {
 		 * that value
 		 */
 
+		/*
+		 * Solve the problem in the method below
+		 */
+		// Map<String, Integer> amountMap = new HashMap<String, Integer>();
+		// amountMap.put("Joe", 100);
+		// amountMap.put("Steve", 200);
 		
+		// for (String key : amountMap.keySet()) {
+		// 	System.out.println(key + " Starts with $" + amountMap.get(key));
+		// }
+		
+		// amountMap = giveHalfOfJoesMoneyToSteve(amountMap);
+		
+		// for (String key : amountMap.keySet()) {
+		// 	System.out.println(key + " now has $" + amountMap.get(key));
+		// }
+
+
 		/*
 		 * Set Examples
 		 */
@@ -73,23 +90,6 @@ public class ClassExamples {
 		 */
 
 		
-		
-		/*
-		 * Solve the problem in the method below
-		 */
-		Map<String, Integer> amountMap = new HashMap<String, Integer>();
-		amountMap.put("Joe", 100);
-		amountMap.put("Steve", 200);
-		
-		for (String key : amountMap.keySet()) {
-			System.out.println(key + " Starts with $" + amountMap.get(key));
-		}
-		
-		amountMap = giveHalfOfJoesMoneyToSteve(amountMap);
-		
-		for (String key : amountMap.keySet()) {
-			System.out.println(key + " now has $" + amountMap.get(key));
-		}
 	}
 	
 	public static Map<String, Integer> giveHalfOfJoesMoneyToSteve(Map<String, Integer> amountMap) {
