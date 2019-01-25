@@ -19,3 +19,4 @@ target
 
 # ignore visual studio code config file
 .vscode
+/bin/
