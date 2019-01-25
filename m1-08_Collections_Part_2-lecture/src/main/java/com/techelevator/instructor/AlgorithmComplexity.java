@@ -5,7 +5,7 @@ public class AlgorithmComplexity {
 	public static void main(String[] args) {
 		
 		// Get the Array before the timing starts so it doesn't change our timing
-		int count = 100;   // Change this to get arrays of different size  (WARNING: STAY under 50 for O(2n))
+		int count = 50;   // Change this to get arrays of different size  (WARNING: STAY under 50 for O(2n))
 		int[] array = getArrayOfSize(count);
 		
 		long startTime = System.nanoTime();
@@ -20,7 +20,7 @@ public class AlgorithmComplexity {
 		//doesArrayContainDuplicates(array);
 		
 		// O(2n) : Exponential Complexity
-		//Fibonacci(count);
+		Fibonacci(count);
 		
 		long endTime = System.nanoTime();
 		long duration = (endTime - startTime);
