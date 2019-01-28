@@ -1,0 +1,11 @@
+Card 
+-suit
+-value
+-faceUp (default value)
+-flip()
+
+Deck
+-hold cards
+-shuffle()
+-deal()
+-keep track of count()
