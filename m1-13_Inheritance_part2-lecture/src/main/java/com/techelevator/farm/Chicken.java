@@ -1,9 +1,13 @@
 package com.techelevator.farm;
 
-public class Chicken extends FarmAnimal {
+public class Chicken extends FarmAnimal implements Sellable {
 	
 	public Chicken() {
-		super("Chicken", "cluck!");
+		this(false);
+	}
+	
+	public Chicken(boolean sleeping) {
+		super("Chicken", "cluck!", 759, sleeping);
 	}
 	
 	public void layEgg() {
