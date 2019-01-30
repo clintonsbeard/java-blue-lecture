@@ -1,9 +1,9 @@
 package com.techelevator.farm;
 
-public class Cow extends FarmAnimal {
+public class Cow extends FarmAnimal implements Sellable {
 
 	public Cow() {
-		super("Cow", "moo!");
+		super("Cow", "moo!", 901463420);
 	}
 
 }
