@@ -3,7 +3,13 @@ package com.techelevator.farm.instructor;
 public class OldMacdonald {
 	public static void main(String[] args) {
 		
-		Singable[] thingsThatCanSing = new Singable[] { new Cow(), new Chicken(), new Sheep(), new Tractor() };
+		FarmAnimal cow = new Cow();
+		FarmAnimal sheep = new Sheep();
+	
+			
+		Singable[] thingsThatCanSing = new Singable[] { 
+				new Cow(true), new Chicken(), 
+				new Sheep(), new Tractor(), new Cat(true) };
 		
 		for(Singable  singer: thingsThatCanSing) {
 			String name = singer.getName();
