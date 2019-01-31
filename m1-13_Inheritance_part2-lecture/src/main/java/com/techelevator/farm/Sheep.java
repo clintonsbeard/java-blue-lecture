@@ -10,4 +10,8 @@ public class Sheep extends FarmAnimal {
 		super("Sheep", "baa!", 80490, sleeping);
 	}
 	
+	@Override
+	public String eat() {
+		return "Sheep starves to death because he's a little jerk.";
+	}
 }

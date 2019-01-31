@@ -1,7 +1,11 @@
 package com.techelevator.farm;
 
 public class OldMacdonald {
+	
 	public static void main(String[] args) {
+		
+		FarmAnimal cow = new Cow();
+		cow.eat();
 		
 		Singable[] thingsThatCanSing = new Singable[] {
 			new Cow(true), new Chicken(), new Sheep(), new Tractor(), new Cat() };

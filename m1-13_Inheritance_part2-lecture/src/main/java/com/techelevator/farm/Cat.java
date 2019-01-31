@@ -1,6 +1,6 @@
 package com.techelevator.farm;
 
-public class Cat extends FarmAnimal {
+public final class Cat extends FarmAnimal {
 
 	public Cat() {
 		this(false);
@@ -8,6 +8,11 @@ public class Cat extends FarmAnimal {
 	
 	public Cat(boolean sleeping) {
 		super("Cat", "meow!", 0, sleeping);
+	}
+	
+	@Override
+	public String eat() {
+		return "The cat has eaten your soul.";
 	}
 	
 }

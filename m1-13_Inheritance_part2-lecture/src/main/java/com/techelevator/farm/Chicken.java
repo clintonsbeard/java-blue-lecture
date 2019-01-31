@@ -13,5 +13,9 @@ public class Chicken extends FarmAnimal implements Sellable {
 	public void layEgg() {
 		System.out.println("Chicken laid an egg!");
 	}
-
+	
+	@Override
+	public String eat() {
+		return "Chicken has been eaten!";
+	}
 }

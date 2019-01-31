@@ -1,6 +1,6 @@
 package com.techelevator.farm;
 
-public class FarmAnimal implements Singable {
+public abstract class FarmAnimal implements Singable {
 	private String name;
 	private String sound;
 	private int price;
@@ -12,6 +12,8 @@ public class FarmAnimal implements Singable {
 		this.price = price;
 		this.sleeping = sleeping;
 	}
+	
+	public abstract String eat();
 	
 	@Override
 	public String getName() {

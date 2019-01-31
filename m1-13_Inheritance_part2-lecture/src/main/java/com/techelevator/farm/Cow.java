@@ -9,5 +9,10 @@ public class Cow extends FarmAnimal implements Sellable {
 	public Cow(boolean sleeping) {
 		super("Cow", "moo!", 901463420, sleeping);
 	}
+	
+	@Override
+	public String eat() {
+		return "Cow eat yum yum doodlebug";
+	}
 
 }
