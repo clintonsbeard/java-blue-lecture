@@ -1,15 +1,19 @@
 package com.techelevator.farm.instructor;
 
-public class FarmAnimal implements Singable {
+public abstract class FarmAnimal implements Singable {
 	private String name;
 	private String sound;
 	private int price;
+	private boolean sleeping;
 	
-	public FarmAnimal(String name, String sound, int price) {
+	public FarmAnimal(String name, String sound, int price, boolean sleeping) {
 		this.name = name;
 		this.sound = sound;
 		this.price = price;
+		this.sleeping = sleeping;
 	}
+	
+	public abstract String eat();
 	
 	@Override
 	public String getName( ) {
@@ -17,12 +21,27 @@ public class FarmAnimal implements Singable {
 	}
 	
 	@Override
-	public String getSound( ) {
+	public final String getSound( ) {
+		if (sleeping) {
+			return "Zzzzz.....";
+		}
 		return sound;
 	}
 	
 	public int getPrice() {
 		return price;
+	}
+	
+	public boolean isSleeping() {
+		return sleeping;
+	}
+	
+	public void sleep() {
+		sleeping = true;
+	}
+	
+	public void wake() {
+		sleeping = false;
 	}
 	
 }
