@@ -85,7 +85,7 @@ public class LectureTest {
 		Assert.assertTrue("String did not start with Hello as expected.", startsWithHello);   // Assert
 	}
 	
-	@Test
+	@Test 
 	public void this_test_fails_every_time() {
 		System.out.println("this_test_fails_every_time"); // FOR DEMONSTRATION PURPOSES ONLY, don't do this in your own tests
 		
