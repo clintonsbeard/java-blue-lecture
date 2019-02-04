@@ -13,6 +13,7 @@ public class ExceptionsLecture {
 		 * 
 		 * By using try/catch blocks, you can stop the Exception from exiting the method and provide
 		 * code to handle it. */
+		
 		System.out.println("The following cities: ");
 		String[] cities = new String[] { "Cleveland", "Columbus", "Cincinatti" };
 		try {
@@ -29,6 +30,7 @@ public class ExceptionsLecture {
 		System.out.println();
 		
 		/* try/catch blocks will also catch Exceptions that are thrown from method calls further down the stack */
+		
 		try {
 			System.out.println("Hey ya'll, watch this!");
 			doSomethingDangerous();  // throws an ArrayIndexOutOfBoundsException
@@ -41,6 +43,7 @@ public class ExceptionsLecture {
 		
 		/* catch statements can take advantage of polymorphism. The catch block will handle any Exception that 
 		 * matches the declared Exception type, including subclasses of the declared type */
+		
 		try {
 			System.out.println("The standard work week is 40 hours.");
 			System.out.print("How many hours did you work this week? >>> ");
@@ -54,6 +57,7 @@ public class ExceptionsLecture {
 				
 		/* we can throw our own Exceptions in response to exceptional cases 
 		 * see the source code of calculateHotelRoomCharges for an example */
+		
 		int nights = -3;
 		int numberOfGuests = 2;
 		try {
@@ -65,9 +69,9 @@ public class ExceptionsLecture {
 		}
 		System.out.println();
 		
-		
 		/* The withdraw method can throw a checked exception (i.e. OverdraftException) so we need to catch it since
 		 * the main method does not declare that it throws any exceptions. */
+		
 		double currentBalance = 250;
 		double amountToWithdraw = 300;
 		try {
@@ -81,11 +85,11 @@ public class ExceptionsLecture {
 		
 		/* if we try to call the withdraw method outside of a try/catch, it will cause a compiler error */
 		//withdraw(currentBalance, amountToWithdraw);
-		
 				
 		/* every Exception contains a "stacktrace" that can be extremely useful in debugging.
 		 * The stacktrace contains a record of where the Exception was thrown and all of the 
 		 * method calls that lead up to the Exception being thrown. */
+		
 		try {
 			doSomethingDangerous(); // throws an ArrayIndexOutOfBoundsException
 		} catch (ArrayIndexOutOfBoundsException e) {
@@ -98,11 +102,13 @@ public class ExceptionsLecture {
 	/* this method does not need to declare that it throws an IllegalArgumentException because
 	 * it is a subclass of RuntimeException.  These are known as "unchecked exceptions" because
 	 * the compiler does not force us to catch them. */
+	
 	private static double calculateHotelRoomCharges(int nights, int numberOfGuests) {
 		final double EXTRA_GUEST_CHARGE = 20;
 		final double ROOM_RATE = 85;
 		
 		/* The throw statements below demonstrate how to throw a new Exception. */
+		
 		if(nights < 1) {
 			throw new IllegalArgumentException("Minimum number of nights is 1");
 		} else if(numberOfGuests < 1) {
@@ -121,6 +127,7 @@ public class ExceptionsLecture {
 	/* OverdraftException is a "checked exception" (i.e. it is a subclass of java.lang.Exception)
 	 * so we need to either catch it or declare that it is thrown.  This method declares that 
 	 * it can throw an OverdraftException using the "throws" keyword */
+	
 	public static double withdraw(double currentBalance, double amountToWithdraw) throws OverdraftException {
 		double newBalance;
 		if(amountToWithdraw <= currentBalance) {
