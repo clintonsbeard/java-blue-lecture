@@ -17,7 +17,7 @@ public class RTNValidator {
 			while(fileScanner.hasNextLine()) {
 				String line = fileScanner.nextLine();
 				String rtn = line.substring(0, 9);
-				
+			
 				if(checksumIsValid(rtn) == false) {
 					System.out.println(line);
 				}
