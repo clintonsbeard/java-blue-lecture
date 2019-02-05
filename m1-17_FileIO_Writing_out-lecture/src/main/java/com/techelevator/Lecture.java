@@ -1,5 +1,6 @@
 package com.techelevator;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -98,8 +99,14 @@ public class Lecture {
 		System.out.print("Enter a message to be stored in the new file >>> ");
 		String message = userInput.nextLine();
 		
-		try(PrintWriter writer = new PrintWriter(newFile)) {
-			writer.println(message);
+		// JUST PRINT WRITER - try(PrintWriter writer = new PrintWriter(newFile)) {
+		
+		// USING BUFFERED WRITER
+		try(PrintWriter printWriter = new PrintWriter(newFile);
+				BufferedWriter buffered = new BufferedWriter(printWriter)) {
+			for (int i = 0 ; i < 100; i++) {
+				buffered.write(message + "\n");
+			}
 		} // When we exit the try block, this cause the file to be closed and an automatic flush of the buffer to trigger
 		
 		System.out.println();
