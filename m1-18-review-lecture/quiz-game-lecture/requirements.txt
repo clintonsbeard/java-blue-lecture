@@ -1,0 +1,33 @@
+Requirements:
+
+1. Ask the user their name
+2. Ask the user to enter a file name of a quiz file
+3. The Quiz should give a welcome message to the user that displays their name
+4. The quiz should be created by reading the questions and answers from the file
+5. The quiz will have 2 question types:  True/False and Multiple Choice (with 4 possible answers)
+6. The quiz should randomize the questions
+7. The quiz should randomize the answers for Multiple Choice questions, but not True/False questions.  
+8. The quiz should give immediate feedback to the user if they answered the question correct or incorrect
+9. If the answer was incorrect, then the correct answer should be shown to the user
+10. The quiz should give a final score that is personalized with the users name, and shows the Percentage score, the number of answers correct, and the total number of questions
+
+
+Quiz File Format
+------------------------------
+CSV listing of questions and answers
+
+Each line should represent:
+Question,Question Type,Answer1,Answer2,Answer3,Answer4
+
+The valid Question Types are
+	TF - True and False
+	MC - Multiple Choice
+
+True and False Questions should have 2 answers
+Multiple Choice Questions should have 4 answers
+
+The correct answer should be marked with a * at the end of the answer text
+
+Examples:
+What word instantiates an object from a class?,MC,new*,instantiate,create,none of the above
+Is String a value type?,TF,T,F*,,

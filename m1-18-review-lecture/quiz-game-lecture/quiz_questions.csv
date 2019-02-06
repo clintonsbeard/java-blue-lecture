@@ -1,0 +1,20 @@
+What word instantiates an object from a class?,MC,new*,instantiate,create,none of the above
+Is String a value type?,TF,T,F*,,
+Is Array a Collection Type?,TF,T,F*,,
+What is saved in a .jave file?,MC,byte code,source code*,machine code,secret code
+What program is used to compile java source code?,MC,git,java,javac*,jvm
+What is the result of int x = 9/2?,MC,4*,5,4.5,Other
+"When a reference variable does not point to an object, it is _?",MC,empty,blank,null*,happy
+You cannot change the value of a string?,TF,T*,F,,
+Which variable name is invalid?,MC,myVar,$variable,4birds*,four_birds
+What Best describes a Queue?,MC,First in Last Out,First in First Out*,Last In First Out,Last Out First In
+What is Map?,MC,Interface*,class,object,variable
+Can String be compared using ==?,TF,T,F*,,
+All Objects are a descendent of what class?,MC,Object*,Master,String,Prototype
+Can a class have multiple superclasses?,TF,T,F*,,
+Can an interface implement an interface?,TF,T,F*,,
+Abstract methods must be implemented by a subclass?,TF,T*,F,,
+A private method can be overriden?,TF,T,F*,,
+A private method can be overloaded?,TF,T*,F,,
+What modifier declares a variable whose value cannot be changed once set?,MC,static,private,final*,none
+Unit tests are just as important as the application code they test?,TF,T*,F,,
