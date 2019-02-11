@@ -9,8 +9,10 @@ import com.techelevator.quiz.Quiz;
 import com.techelevator.quiz.question.Answer;
 import com.techelevator.quiz.question.Question;
 
-public class Menu {
+/* Job: Communicate with user.  No other classes communicate with System.in or System.out, only this one */
 
+public class Menu {
+	
 	private Scanner in;
 	private PrintStream out;
 	
@@ -78,8 +80,6 @@ public class Menu {
 		return in.nextLine();
 	}
 	
-
-	
 	public void showWelcome(String user) {
 		System.out.println();
 		System.out.println("Welcome " + user + " let's begin!");
@@ -98,7 +98,6 @@ public class Menu {
 				out.println("Invalid choice, please try again!");
 				continue;
 			}
-			
 			if (selection - 1 < answers.size()) {
 				userChoice = answers.get(selection - 1);
 			} else {
@@ -106,10 +105,7 @@ public class Menu {
 				continue;
 			}
 		}
-		return userChoice;
-		
+		return userChoice;		
 	}
-	
-
 	
 }

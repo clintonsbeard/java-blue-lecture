@@ -17,27 +17,43 @@ public class FileQuizReader implements QuizReader {
 	private String filePath;
 	
 	public FileQuizReader(String filePath) {
+		
 		this.filePath = filePath;
+		
 	}
 		
 	public List<Question> read() throws LoadQuizException {
 		
-
+		List<String> lines;
+		try {
+			lines = readFile();
+		} 
+		catch (FileNotFoundException e) {
+			
+			/* Catch the file exception and throw a more general custom
+			 * LoadQuizException, so our read() method is not coupled to
+			 * loading questions from files
+			 */
+			
+			throw new LoadQuizException("File Not Found", e);
+		} 
+		return buildQuestionsFromFileStrings(lines);
 		
-		return null;
 	}
 	
-	
-	private List<String> readFile(String filePath) throws FileNotFoundException {
+	private List<String> readFile() throws FileNotFoundException {
 		
 		List<String> lines = new ArrayList<String>();
 		
-	
-		
+		File inputFile = new File(filePath);
+		try (Scanner fileScanner = new Scanner (inputFile)) {
+			while (fileScanner.hasNextLine()) {
+				lines.add(fileScanner.nextLine());
+			}
+		}
 		return lines;
 		
 	}
-	
 	
 	private List<Question> buildQuestionsFromFileStrings(List<String> lines) {
 		
@@ -50,50 +66,46 @@ public class FileQuizReader implements QuizReader {
 			if (parts[1].equals("MC")) {
 				questions.add(buildMultipleChoiceQuestion(parts));
 			}
-			
 			if (parts[1].equals("TF")) {
 				questions.add(buildTrueFalseQuestion(parts));
 			}
-			
 		}
-		
 		return questions;
+		
 	}
 	
 	private Question buildMultipleChoiceQuestion(String[] parts) {
 		
-		Question question = null; //new MultipleChoiceQuestion(parts[0]);
+		Question question = new MultipleChoiceQuestion(parts[0]);
 		
 		for (int i = 2; i < 6; i++) {
 			question.addAnswer(buildAnswer(parts[i]));
 		}
-		
 		return question;
+		
 	}
-	
 	
 	private Question buildTrueFalseQuestion(String[] parts) {
 		
-		Question question = null; //new TrueFalseQuestion(parts[0]);
+		Question question = new TrueFalseQuestion(parts[0]);
 		
 		for (int i = 2; i < 4; i++) {
 				question.addAnswer(buildAnswer(parts[i]));
 		}
-		
 		return question;
+		
 	}
-	
-	
 	
 	private Answer buildAnswer(String answerString) {
 		
 		if (answerString.endsWith("*")) {
 					return new Answer(
 							answerString.substring(0, answerString.length() -1), true);
-		} else {
+		}
+		else {
 			return new Answer(answerString, false);
 		}
-		
+
 	}
 	
 }

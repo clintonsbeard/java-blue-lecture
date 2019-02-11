@@ -17,7 +17,6 @@ public class Scorer {
 		}
 	}
 
-
 	public int getCorrect() {
 		return correct;
 	}
@@ -26,6 +25,5 @@ public class Scorer {
 		int score = (int) (((double) correct / (double) totalQuestions) * 100);
 		return score;
 	}
-	
-	
+		
 }

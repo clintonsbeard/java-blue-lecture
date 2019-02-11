@@ -7,7 +7,6 @@ import com.techelevator.quiz.question.Question;
 
 public interface QuizReader {
 
-
 	List<Question> read() throws LoadQuizException;
 	
 }

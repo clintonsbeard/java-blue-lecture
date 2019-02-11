@@ -25,7 +25,6 @@ public class QuizReaderTest {
 		reader = new FileQuizReader(QUIZ_FILE);
 	}
 	
-	
 	@Test
 	public void read_all_quiz_questions() {
 		
@@ -48,11 +47,11 @@ public class QuizReaderTest {
 		
 		assertCorrectAnswerExists(question.getSortedAnswers());
 		
-//		if (question instanceof MultipleChoiceQuestion) {
-//			assertAnswersMultipleChoice(question.getSortedAnswers());
-//		} else if (question instanceof TrueFalseQuestion) {
-//			assertAnswersTrueFalse(question.getSortedAnswers());
-//		}
+		if (question instanceof MultipleChoiceQuestion) {
+			assertAnswersMultipleChoice(question.getSortedAnswers());
+		} else if (question instanceof TrueFalseQuestion) {
+			assertAnswersTrueFalse(question.getSortedAnswers());
+		}
 	}
 	
 	private void assertAnswersMultipleChoice(List<Answer> answers) {
@@ -71,9 +70,7 @@ public class QuizReaderTest {
 				correct++;
 			}
 		}
-		
 		Assert.assertEquals("Wrong number of correct answers found", 1,  correct);
-
 	}
 	
 }

@@ -7,6 +7,8 @@ import com.techelevator.quiz.question.Answer;
 import com.techelevator.quiz.question.MultipleChoiceQuestion;
 import com.techelevator.quiz.question.Question;
 
+/* Job: Represent the quiz */
+
 public class Quiz {
 	
 	private List<Question> questions;
@@ -46,10 +48,10 @@ public class Quiz {
 	public void scoreQuestion(Answer userAnswer) {
 		this.scorer.score(userAnswer);
 	}
-
 	
 	private void createQuiz() {
 		scorer = new Scorer(questions.size());
 		Collections.shuffle(questions);
 	}
+	
 }
