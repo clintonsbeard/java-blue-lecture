@@ -113,7 +113,7 @@ public class JDBCExample {
 		deleteMarcOMalleyStmt.executeUpdate();
 		
 		conn.commit();
-		
+	
 		/* Marc O'Malley rises again! */
 		insertActorStmt.executeUpdate();
 		
