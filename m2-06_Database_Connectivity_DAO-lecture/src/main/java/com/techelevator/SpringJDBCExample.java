@@ -36,7 +36,7 @@ public class SpringJDBCExample {
 		
 		System.out.println(category+" Films:");
 		while(results.next()) {  // The "next" method advances the cursor to the next row.  If a row exists, it returns true, otherwise false
-			String filmTitle = results.getString("title");  // this is the title column from teh SELECT statment above
+			String filmTitle = results.getString("title");  // this is the title column from the SELECT statement above
 			int releaseYear = results.getInt("release_year");
 			System.out.println(filmTitle+" ("+releaseYear+")");
 		}
