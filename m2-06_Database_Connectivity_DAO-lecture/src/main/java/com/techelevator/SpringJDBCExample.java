@@ -45,7 +45,7 @@ public class SpringJDBCExample {
 		String sqlCreateActor = "INSERT INTO actor(actor_id, first_name, last_name) "+
 								"VALUES (?, ?, ?)";
 		
-		dvdstoreJdbcTemplate.update(sqlCreateActor, 1000, "Craig", "Castelaz");
+		//dvdstoreJdbcTemplate.update(sqlCreateActor, 1000, "Craig", "Castelaz");
 		
 		/* The next example makes use of the world database, so we need a new 
 		 * DataSource for creating connections to that database. */
@@ -75,5 +75,16 @@ public class SpringJDBCExample {
 								  "VALUES(?, ?, ?, ?, ?)";
 		
 		worldJdbcTemplate.update(sqlCreateNewCity, id, "Smallville", "USA", "Kansas", 45001);
+		
+		/* 
+		 * Can Also get the sequence value used from the Insert using RETURNING and the sequences column name 
+		 */
+		String sqlCreateNewCityReturningId = "INSERT INTO city(id, name, countrycode, district, population) "+
+				  "VALUES(DEFAULT, ?, ?, ?, ?) RETURNING id";
+		
+		results = worldJdbcTemplate.queryForRowSet(sqlCreateNewCityReturningId, "Smallville", "USA", "Kansas", 45001);
+		results.next();
+		int returnedId = results.getInt(1);
+		
 	}
 }
