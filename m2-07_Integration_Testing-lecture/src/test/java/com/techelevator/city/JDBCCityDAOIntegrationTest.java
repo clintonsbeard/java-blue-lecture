@@ -61,23 +61,33 @@ public class JDBCCityDAOIntegrationTest {
 	}
 	
 	@Test
-	public void save_new_city_and_read_it_back() throws SQLException {
+	public void save_new_city_and_read_it_back()  {
+		
+		// Arrange
 		City theCity = getCity("SQL Station", "South Dakota", "USA", 65535);
 		
+		// Act 1 : Insert
 		dao.save(theCity);
+		
+		// Act 2 : Select
 		City savedCity = dao.findCityById(theCity.getId());
 		
+		// Assert
 		assertNotEquals(null, theCity.getId());
 		assertCitiesAreEqual(theCity, savedCity);
 	}
 
 	@Test
 	public void returns_cities_by_country_code() {
-		City theCity = getCity("SQL Station", "South Dakota", TEST_COUNTRY, 65535);
 		
+		// Arrange
+		City theCity = getCity("SQL Station", "South Dakota", TEST_COUNTRY, 65535);
 		dao.save(theCity);
+		
+		// Act
 		List<City> results = dao.findCityByCountryCode(TEST_COUNTRY);
 		
+		// Assert
 		assertNotNull(results);
 		assertEquals(1, results.size());
 		City savedCity = results.get(0);
@@ -87,23 +97,31 @@ public class JDBCCityDAOIntegrationTest {
 	@Test
 	public void returns_multiple_cities_by_country_code() {
 
+		// Arrange
 		dao.save(getCity("SQL Station", "South Dakota", TEST_COUNTRY, 65535));
 		dao.save(getCity("Postgres Point", "North Dakota", TEST_COUNTRY, 65535));
 		
+		// Act
 		List<City> results = dao.findCityByCountryCode(TEST_COUNTRY);
 		
+		// Assert
 		assertNotNull(results);
 		assertEquals(2, results.size());
 	}
 	
 	@Test
 	public void returns_cities_by_district() {
+		
+		// Arrange
 		String testDistrict = "Tech Elevator";
 		City theCity = getCity("SQL Station", testDistrict, TEST_COUNTRY, 65535);
 		dao.save(theCity);
 		
+		// Act
 		List<City> results = dao.findCityByDistrict(testDistrict);
 		
+		
+		// Assert
 		assertNotNull(results);
 		assertEquals(1, results.size());
 		City savedCity = results.get(0);
