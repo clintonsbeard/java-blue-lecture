@@ -40,6 +40,8 @@ public class JDBCCityDAO implements CityDAO {
 		if(results.next()) {
 			theCity = mapRowToCity(results);
 		}
+		
+		// Arrange
 		return theCity;
 	}
 

@@ -1,16 +1,7 @@
-/*
+
 div {
     background-color: red;
 }
-*/
-
-/*
-div {
-    background-color: blue;
-}
-*/
-
-/*
 * {
     background-color: green;
 }
@@ -20,7 +11,10 @@ div {
 #idExample {
     background-color: gray;
 }
-*/
+
+.descendentOne {
+    background-color: orange;
+}
 
 div {
     border-style: solid;
