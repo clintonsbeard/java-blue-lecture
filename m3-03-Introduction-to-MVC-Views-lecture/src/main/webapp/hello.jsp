@@ -4,6 +4,14 @@
 <html>
 	<head>
 		<title>MVC Views Part 1 - Example: Hello, Internet!</title>
+		<style>
+			.red {
+				color: red;
+			}
+			.blue {
+				color: blue;
+			}
+		</style>
 	</head>
 	<body>
 		<c:choose>
@@ -21,6 +29,22 @@
 			</c:otherwise>
 		</c:choose>
 	
-		<h1>Hello, ${name}!</h1>
+		<c:forEach begin="1" end="${param.number}" var="num">
+			<c:choose>
+				<c:when test="${num % 2 == 0}">
+					<c:set var="cssClass" value="red" />
+				</c:when>
+				<c:when test="${num % 3 == 0}">
+					<c:set var="cssClass" value="blue" />
+				</c:when>
+				<c:otherwise>
+					<c:set var="cssClass" value="" />
+				</c:otherwise>
+			</c:choose>
+			
+			<h1 class="${cssClass}">Hello, ${name}! : ${num}</h1>
+		</c:forEach>
+		
+		
 	</body>
 </html>
