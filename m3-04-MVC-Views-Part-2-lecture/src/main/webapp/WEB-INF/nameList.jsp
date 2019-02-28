@@ -6,10 +6,12 @@
 		<title>Name List Example</title>
 	</head>
 	<body>
+		<h1>${name}</h1>
+	
 		<div>
 			<h1>A List of Strings</h1>
 			<ol>
-				<c:forEach var="name" items="${requestScope.nameList}">
+				<c:forEach var="name" items="${nameList}">
 					<li>${name}</li>
 				</c:forEach>
 			</ol>

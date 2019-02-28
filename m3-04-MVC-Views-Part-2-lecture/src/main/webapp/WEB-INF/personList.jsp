@@ -7,7 +7,12 @@
 	</head>
 	<body>
 		<div>
-			<h1>${greeting} ${person.firstName} ${person.lastName}</h1>
+			<h1>${greeting} <c:out value="${doug.firstName}" /> <c:out value="${doug.lastName}" /></h1>
+			
+			<p>
+				${doug.address.street} <br />
+				<c:out value="${doug.address.city}" />, ${doug.address.zipcode}
+			</p>
 
 		</div>
 	
