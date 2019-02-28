@@ -17,9 +17,9 @@ public class PersonServlet extends HttpServlet {
 		req.setAttribute("greeting", "Welcome");
 		
 		Person doug = new Person("Doug", "Rogers", 45);
-		doug.setAddress(new Address("123 Street", "Columbus", "Ohio"));
+		doug.setAddress(new Address("123 Street", "<script>alert('Hello');</script>", "Ohio"));
 		
-		req.setAttribute("person", doug);
+		req.setAttribute("doug", doug);
 		
 		
 		List<Person> personList = new ArrayList<Person>();
