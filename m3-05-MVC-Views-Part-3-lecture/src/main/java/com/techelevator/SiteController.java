@@ -46,7 +46,7 @@ public class SiteController {
 		return "forum/forumDetail";
 	}
 	
-	@RequestMapping("/planetDetails")
+	@RequestMapping("/planetDetail")
 	public String showPlanetDetails(ModelMap map) {
 		
 		map.addAttribute("planets", getListOfPlanets());
