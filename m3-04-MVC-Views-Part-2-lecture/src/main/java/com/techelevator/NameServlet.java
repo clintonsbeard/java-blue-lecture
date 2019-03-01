@@ -17,6 +17,9 @@ public class NameServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
+		
+		req.setAttribute("name", "John");
+		
 		List<String> names = new ArrayList<String>();
 		names.add("André");
 		names.add("Matt");

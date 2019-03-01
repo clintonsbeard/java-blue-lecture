@@ -1,0 +1,120 @@
+body {
+    background-color : black;
+    color : white;
+}
+
+a {
+	color : yellow;
+}
+
+#content a {
+    color : #7A2100;
+}
+
+#logo {
+    width : 600px;
+    height : 150px;
+    margin-bottom : 1em;
+}
+
+#content {
+    width : 800px;
+    background-color : white;
+    padding : 1em;
+    color : black;
+}
+
+div.insertBox {
+    padding : 1em;
+    background-color : #DE8564;
+}
+
+div.insertBox h3 {
+    margin : 0;
+}
+
+div.planet {
+    overflow: auto;
+}
+
+div.planet img {
+    height : 250px;
+    width : 250px;
+    margin-right : 1em;
+    margin-bottom : 1em;
+    float : left;
+}
+
+.fieldGroup {
+	margin-bottom : 8px;
+}
+
+input {
+	margin-right : 1em;
+}
+
+.errorMessage {
+	color : red;
+	text-align : center;
+}
+
+.copyright {
+	width : 800px;
+	color : white;
+	text-align : center;
+}
+
+.result {
+	font-size : 2em;
+}
+
+.topicList {
+	list-style-type : none;
+	border : 3px solid #7A2100;
+	padding : 0;
+}
+
+.topicList li {
+	padding : 5px;
+}
+
+.topicList .even {
+	background-color : #DE8564;
+}
+
+.forumComment {
+	border : 2px dotted #7A2100;
+	margin-left : 1em;
+	margin-bottom : 1em;
+	padding : 0 1em 0 1em;
+}
+
+nav {
+	display: block;
+	/*margin-top: 50px;
+	margin-bottom: 50px;*/
+}
+
+nav ul 
+{
+    width: 100%;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    background-color: white;
+    border-radius: 8px;
+    list-style: none;
+    text-align: center;
+    /*width: 200px;*/
+    padding-top: 5px;
+}
+
+nav:after {
+    clear: both;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
