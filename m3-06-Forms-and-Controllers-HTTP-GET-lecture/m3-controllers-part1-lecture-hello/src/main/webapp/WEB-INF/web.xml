@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+		 
+  <display-name>Hello Spring MVC</display-name>
+  
+  <!-- 
+  The Spring DispatcherServlet plays the role of a “Front Controller” in the
+  Spring MVC framework. In order to use Spring Web MVC, we need to configure 
+  this Servlet in `web.xml`. 
+  -->
+  <servlet>
+  	<!-- 
+  	The `DispatcherServlet` will look for a file named `[servlet-name]-servlet.xml` 
+  	in the `WEB-INF` directory to find the Spring context configuration. So, in this
+  	case, it will look for a file named `springmvc-servlet.xml`.
+  	-->
+    <servlet-name>springmvc</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <!-- This maps all application requests to the Spring DispatcherServlet -->
+  <servlet-mapping>
+    <servlet-name>springmvc</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+	
+  <!--   
+  The problem with with the DispatcherServlet mapping above is that it will also be 
+  invoked for requests for static resources like CSS files and images.  Every 
+  container (including Tomcat) has a default Servlet that can be referenced by 
+  the servlet name `default`.  We can let the default Servlet handle requests 
+  for static resources using the mapping below.
+  -->
+  <servlet-mapping>
+  	<!-- Every servlet container (i.e. Tomcat) has a servlet with the name "default" -->
+  	<servlet-name>default</servlet-name> 
+  	<!-- We want the default servlet to handle all requests for static resources -->
+  	<url-pattern>*.css</url-pattern>
+  	<url-pattern>*.js</url-pattern>
+  	<url-pattern>*.png</url-pattern>
+  	<url-pattern>*.jpg</url-pattern>
+  	<url-pattern>*.gif</url-pattern>
+  </servlet-mapping>
+</web-app>
