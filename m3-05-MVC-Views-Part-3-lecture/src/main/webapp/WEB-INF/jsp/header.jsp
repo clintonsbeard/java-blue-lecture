@@ -19,12 +19,18 @@
 
 <div id="content">
 
-<c:url value="/aboutUs" var="aboutUsURL" />    
+<c:url value="/aboutUs" var="aboutUsURL" />
+
+<c:url value="/planetDetail" var="planetDetailURL" >
+	<c:param name="user" value="Jim" />
+	<c:param name="textColor">red</c:param>
+</c:url>    
+
     <nav>
     		<ul>
     			<li><a href="${homePageURL}">Home</a></li>
     			<li><a href="${aboutUsURL}">About Us</a></li>
-    			<li><a href="#">Another Link</a></li>
+    			<li><a href="${planetDetailURL}">Planet Details</a></li>
     		</ul>
     </nav>
     
