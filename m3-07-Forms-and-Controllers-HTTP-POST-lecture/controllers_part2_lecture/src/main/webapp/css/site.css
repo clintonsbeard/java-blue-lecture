@@ -1,0 +1,25 @@
+body {
+	background-color: #FEFFE6;
+}
+
+p, ol, label, input {
+	font-size: 18pt;
+}
+
+#main_content {
+	width: 800px;
+	margin: 0 auto;
+}
+
+#main_content img {
+	display: block;
+	margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+}
+
+.formGroup {
+	margin-bottom: 1em;
+}
