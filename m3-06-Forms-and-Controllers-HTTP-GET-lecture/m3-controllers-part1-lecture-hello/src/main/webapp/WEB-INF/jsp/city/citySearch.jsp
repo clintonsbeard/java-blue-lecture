@@ -8,7 +8,7 @@
 	<body>
 		<h1>City Search by Country Code</h1>
 		<c:url var="citySearchUrl" value="/result" />
-		<form action="citySearchUrl" method="GET">
+		<form action="${citySearchUrl}" method="GET">
 			<label for="countryCode">Country Code</label>
 			<input type="text" name="countryCode" />
 			<input type="submit" value="Death is the only escape." />
