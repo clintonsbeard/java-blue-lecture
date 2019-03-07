@@ -3,6 +3,7 @@ package com.techelevator.dao.model;
 import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Email;
@@ -10,7 +11,12 @@ import org.hibernate.validator.constraints.NotBlank;
 
 public class SignUp {
 	
-	@NotBlank(message="Name is required")
+	/*
+	 * Annotations determine what is validated.
+	 * The message is the Text displayed the user
+	 */
+	
+	@NotBlank(message="Please give us your name")
 	private String name;
 	
 	@NotBlank(message="Email address is required")
@@ -25,6 +31,7 @@ public class SignUp {
 	
 	private String occupation;
 	
+	@NotNull(message="Please enter your age")
 	@Min(value=13, message="You must be 13 years old or older")
 	@Max(value=150, message="You're not that old!")
 	private Integer age;

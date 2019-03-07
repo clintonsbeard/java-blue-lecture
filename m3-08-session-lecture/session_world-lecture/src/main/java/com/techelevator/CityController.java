@@ -24,6 +24,7 @@ import com.techelevator.dao.model.User;
 
 @Controller
 //@SessionAttributes("user") // Example of single Session value
+@SessionAttributes({"user", "bgClass" })
 //@SessionAttributes({"user", "bgClass"})   // Example of multiple session values
 public class CityController {
 
@@ -32,6 +33,8 @@ public class CityController {
 	
 	@RequestMapping(path="/", method=RequestMethod.GET)
 	public String showCityList(ModelMap map) {
+		
+
 		
 		if (map.get("user") == null) {
 			return "redirect:/login";

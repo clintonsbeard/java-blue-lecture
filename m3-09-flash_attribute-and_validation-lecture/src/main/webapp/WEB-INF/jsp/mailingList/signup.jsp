@@ -11,6 +11,9 @@
 
 <form:form action="${mailingListSignUpUrl}" method="POST" modelAttribute="signup">
 		
+	    <div>
+			<form:errors path="*" cssClass="error"/>
+		</div>
 	
         <div>
         		<label for="name">Name</label>
@@ -37,7 +40,7 @@
         <div>
             <label for="phone">Phone Number (XXX)XXX-XXXX</label>
             <form:input path="phone" />
-                    		<form:errors path="phone" cssClass="error"/>
+                    		<form:errors path="phone" cssClass="errorPhone"/>
             
         </div>
         <div>
