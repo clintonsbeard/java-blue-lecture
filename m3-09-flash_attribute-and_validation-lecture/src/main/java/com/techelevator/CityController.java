@@ -1,5 +1,7 @@
 package com.techelevator;
 
+import java.time.LocalDate;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,14 +50,22 @@ public class CityController {
 		return "addCity";  
 	}
 	
+	/*
+	 * Add RedirectAttributes as an argument to the controller to 
+	 * access Flash Scope
+	 */
 	@RequestMapping(path="/addCity", method=RequestMethod.POST)
-	public String addNewCity(City newCity, ModelMap map) {
+	public String addNewCity(City newCity, RedirectAttributes attr) {
 	
 		newCity.setCountryCode("USA");	
 		cityDao.save(newCity);
 
-		map.addAttribute("city", newCity);
-		
+		/*
+		 * Add a Key/Value pair to the RedirectAttributes
+		 * using addFlashAttribute() to add a value to Flash Scope
+		 */
+		attr.addFlashAttribute("city", newCity);
+
 		return "redirect:/addCityResult";  
 	}
 
@@ -63,12 +73,22 @@ public class CityController {
 	@RequestMapping(path="/addCityResult", method=RequestMethod.GET)
 	public String showAddCityResult(ModelMap map) {	
 		
+		/*
+		 * Can retrieve value from FlashScope using the ModelMap get(key)
+		 * However, must verify the key exists before using it to avoid
+		 * a NullPointerException
+		 */
+		if (map.containsAttribute("city")) {
+			City city = (City) map.get("city");
+			map.addAttribute("comment", "CityId=" + city.getId());
+		}
+		
 		return "cityConfirm";  
 	}
 		
 
 	@RequestMapping(path="/login", method=RequestMethod.GET)
-	public String showLogin() {
+	public String showLogin(ModelMap map) {
 		return "login";
 	}
 	

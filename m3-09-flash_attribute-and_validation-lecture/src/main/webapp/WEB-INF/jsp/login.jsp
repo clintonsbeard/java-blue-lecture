@@ -18,4 +18,6 @@
 	<input type="submit" value="Login" />
 
 </form>
+
+
 <%@include file="common/footer.jspf"%>

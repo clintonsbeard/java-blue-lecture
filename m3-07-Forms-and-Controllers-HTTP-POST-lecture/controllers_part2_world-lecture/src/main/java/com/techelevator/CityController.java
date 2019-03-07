@@ -140,6 +140,7 @@ public class CityController {
 		newCity.setCountryCode("USA");	
 		cityDao.save(newCity);
 
+		
 		map.addAttribute("cities", cityDao.findCityByCountryCode("USA"));	
 		return "addCity";  
 	}
@@ -164,12 +165,12 @@ public class CityController {
 		 * Instead of returning a view name, we can return redirect:<controller request mapping> to redirect to
 		 * a GET and keep the form from submitting again on a refresh
 		 */
-		return "redirect:/"; 
+		//return "redirect:/"; 
 		
 		/*
 		 * Or we could choose to redirect to a Thank You or other status page if we don't want to show results
 		 */
-		//return "redirect:/thankyou"; 
+		return "redirect:/thankyou"; 
 	}
 	
 	@RequestMapping(path="/thankyou", method=RequestMethod.GET)
