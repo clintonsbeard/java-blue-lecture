@@ -1,0 +1,166 @@
+header {
+	background-color: #333333;
+}
+
+header p {
+	color: white;
+}
+
+nav {
+	background-color: #f2f2f2;
+}
+
+/* nav li */
+nav ul {
+	list-style: none;
+}
+
+nav a {
+	color: #009900;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+nav a:hover {
+	text-decoration: underline;
+	color: #c00;
+}
+
+.account {
+	background-color: #d6f5d6;
+	margin-bottom: 1em;
+}
+
+.account img {
+	background-color: white;
+}
+
+h2 {
+	font: 36px Helvetica;
+	color: #009900;
+}
+
+footer {
+	background-color: #bfbfbf;
+	margin-top: 1em;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+#checking {
+	color: orange;
+}
+
+/* remove the styles for .account 
+	from the day before  above 
+*/
+
+
+/* box model settings */
+header {
+  padding: 10px;
+}
+nav {
+  margin: 0 0 3em 0;
+  padding: 0;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+nav li {
+  list-style: none;
+}
+nav li a {
+   padding: 8px 15px;
+   border-right: 1px solid #ccc;
+}
+
+.account a {
+	display: block;
+	background-color: white;
+	padding: .5em 1em .5em 1em;
+	border-radius: 1em;
+	text-align: center;
+	font-size: 1.1em;
+}
+
+.account a {
+	color: #009900;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+footer {
+	clear: left;
+   padding: 10px;
+}
+.account img {
+  background-color: white;
+}
+
+
+
+/* Sets up the menu as a block display element */
+nav li a {
+   display: block;
+}
+
+/* Menu Float */
+nav {
+  float: left;
+  width: 100%;
+}
+
+nav li {
+  float: left;
+}
+
+/* 3 Column Layout */
+.account {
+	vertical-align: top;
+	display: inline-block;
+	width: 350px;
+	margin-right: 30px;
+	margin-left: 30px;
+}
+
+.account img {	
+	padding: 10px;
+}
+
+.account h2, .account p {
+	margin-left: 20px;
+	margin-right: 20px;	
+}
+
+.container {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;	
+	margin-bottom: 30px;
+}
+
+.formInputGroup {
+	margin-bottom: .5em;
+}
+
+.formInputGroup label {
+	display: inline-block;
+	width: 8em;
+	text-align: right;
+}
+
+.formSubmitButton {
+	display: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#loanPaymentCalculationResults th {
+	text-align: right;
+}
+
+#loanPaymentCalculationResults td {
+	padding-left: 1em;
+}
