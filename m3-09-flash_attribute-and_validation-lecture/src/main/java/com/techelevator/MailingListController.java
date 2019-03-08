@@ -28,6 +28,7 @@ public class MailingListController {
 		 * a signup in in progress, and if it does not we create a new empty SignUp Bean and put it in the Model
 		 * using the ModelMap. 
 		 */
+		
 		if(! map.containsAttribute("signup")) {
 			map.addAttribute("signup", new SignUp());
 		}
