@@ -9,9 +9,30 @@
  * They don't have a return type and the naming convention is camel-case.
  */
 function variables() {
-  // Declares a variable where the value cannot be changed
+  // Declares a variable where the value cannot be changed 
+  const daysOfTheWeek = 7;
+  console.log(`There are ${daysOfTheWeek} days in the week `);
   // Declares a variable those value can be changed
+  let daysOfTheMonth = 30;
+  console.log(`There are ${daysOfTheMonth} days in the month`);
   // Declares a variable that will always be an array
+  const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+  console.log(weekdays);
+  console.table(weekdays);
+
+  console.log(weekdays[5]);
+  console.log(weekdays[10]);
+
+  weekdays[5] = 'otherDay';
+  console.table(weekdays);
+  weekdays[10] = 'OutOfRange';
+  console.table(weekdays);
+
+  weekdays.push('pushedDay');
+  console.table(weekdays);
+
+  console.log(weekdays.pop());
+  console.table(weekdays);
 }
 
 /**
@@ -70,14 +91,24 @@ function objects() {
       "Milton Waddams",
       "Samir Nagheenanajar",
       "Michael Bolton"
-    ]
+    ],
+    toString: function() {
+      return `${this.lastName}, ${this.firstName} (${this.age})`;
+    } 
   };
 
   // Log the object
-
+  console.table(person);
   // Log the first and last name
-
+  console.log(`${person.firstName} ${person.lastName}`)
   // Log each employee
+  for (let i = 0; i < person.employees.length; i++) {
+    console.log(`Employee ${i + 1} is ${person.employees[i]}`);
+  }
+
+  console.log(person.toString());
+  console.table(person);
+  console.log(person.toString);
 }
 
 /*
@@ -98,10 +129,6 @@ function Add(num1, num2, num3) {
   return num1 + num2 + num3;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/remove-day-one-complex-functions
 /*
 ########################
 Math Library
@@ -117,6 +144,14 @@ function mathFunctions() {
   console.log("Math.floor(1.99) : " + Math.floor(1.99));
   console.log("Math.ceil(1.01) : " + Math.ceil(1.01));
   console.log("Math.random() : " + Math.random());
+
+  let x = 1;
+  let y = '1';
+  console.log(x + parseInt(y));
+
+  console.log(isNaN(''));
+  console.log(isNaN(10));
+  console.log(isNaN('Hello'));
 }
 
 /*
