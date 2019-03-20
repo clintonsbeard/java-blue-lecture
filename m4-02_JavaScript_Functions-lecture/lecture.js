@@ -2,6 +2,7 @@
  * All named functions will have the function keyword and
  * a name followed by parentheses.
  */
+
 function returnOne() {
   return 1;
 }
@@ -14,6 +15,7 @@ function returnOne() {
  *
  * @param {any} value the value to print to the console
  */
+
 function printToConsole(value) {
   console.log(value);
 }
@@ -26,6 +28,10 @@ function printToConsole(value) {
  * @param {number} secondParameter the second parameter to multiply
  */
 
+ function multiplyTogether(firstParameter, secondParameter) {
+  return firstParameter * secondParameter;
+ }
+
 /**
  * This version makes sure that no parameters are ever missing. If
  * someone calls this function without parameters, we default the
@@ -36,6 +42,10 @@ function printToConsole(value) {
  * @param {number} [secondParameter=0] the second parameter to multiply
  */
 
+function multiplyNoUndefined(firstParameter = 0, secondParameter = 0) {
+  return firstParameter * secondParameter;
+ }
+
 /**
  * Scope is defined as where a variable is available to be used.
  *
@@ -43,6 +53,7 @@ function printToConsole(value) {
  * that block and any block underneath it. Once the block that the
  * variable was defined in ends, the variable disappears.
  */
+
 function scopeTest() {
   // This variable will always be in scope in this function
   let inScopeInScopeTest = true;
@@ -59,6 +70,17 @@ function scopeTest() {
   }
 }
 
+/**
+ * Take the details of a person and create an English readable sentence that uses
+ * the provided information, separated by the defined separator, or the default separator ', '
+ *
+ * @param {string} name the name of the person being described
+ * @param {number} age the age of the person
+ * @param {string[]} [listOfQuirks] a list of funny quirks about the person
+ * @param {string} [separator = ', '] the string used to separate the quirks
+ * @returns {string} the combined descriptive string
+ */
+
 function createSentenceFromUser(name, age, listOfQuirks = [], separator = ', ') {
   let description = `${name} is currently ${age} years old. Their quirks are: `;
   return description + listOfQuirks.join(separator);
@@ -71,8 +93,21 @@ function createSentenceFromUser(name, age, listOfQuirks = [], separator = ', ') 
  * @param {number[]} numbersToSum numbers to add up
  * @returns {number} sum of all the numbers
  */
+
 function sumAllNumbers(numbersToSum) {
-  return numbersToSum.reduce();
+  return numbersToSum.reduce(
+    (sum, number) => {
+      return sum + number;
+    }
+  );
+}
+
+function sumAllNumbers(numbersToSum) {
+  return numbersToSum.reduce(function
+    (sum, number) {
+      return sum + number;
+    }
+  );
 }
 
 /**
@@ -83,4 +118,11 @@ function sumAllNumbers(numbersToSum) {
  * @returns {number[]} a new array with only those numbers that are
  *   multiples of 3
  */
-function allDivisibleByThree(numbersToFilter) {}
+
+function allDivisibleByThree(numbersToFilter) {
+  return numbersToFilter.filter(
+    (element) => {
+      return element % 3 === 0;
+    }
+  );
+}
