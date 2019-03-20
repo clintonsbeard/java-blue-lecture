@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>innerHTML demo</title>
+</head>
+<body>
+ 
+    <h1>innerHTML</h1>
+    <div class="content">
+        <script>
+            const el = document.querySelector('.content');
+            const name = "<img src='x' onerror='alert(1)'>";
+            el.innerText = name; // shows the alert
+        </script>
+    </div>
+
+
+</body>
+</html>
