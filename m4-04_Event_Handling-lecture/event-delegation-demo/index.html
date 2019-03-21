@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Event Delegation Demo</title>
+    <style>
+      body {
+        margin: 20px;
+      }
+      li {
+        padding: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Event Delegation Demo</h1>
+    <p>
+      The idea is that if we have a lot of elements handled in a similar way,
+      then instead of assigning a handler to each of them – we put a single
+      handler on their common ancestor.
+    </p>
+
+    <ul id="colors">
+      <li>Red</li>
+      <li>Blue</li>
+      <li>Green</li>
+    </ul>
+
+    <button id="btnAddOrange">Add Orange</button>
+
+    <script src="index.js"></script>
+  </body>
+</html>
