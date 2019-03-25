@@ -21,7 +21,7 @@ section {
     margin: 0px;
 }
 .square {
-    border: 1px dotted black;
+    border: 1px dotted rgba(0, 0, 0, 0.25);
     width: 10%;
     height: 100%;
     margin: 0px;
@@ -42,7 +42,10 @@ section {
 }
 
 .pirate {
-    background-image: url('/img/flag-on-waves.jpg');
+    background-image: linear-gradient(
+        rgba(255, 0, 0, 0.5), 
+        rgba(255, 0, 0, 0.5)
+    ), url('/img/flag-on-waves.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -62,4 +65,3 @@ section {
 .winText {
     color: red;
 }
-
