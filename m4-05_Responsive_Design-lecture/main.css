@@ -143,3 +143,55 @@ body {
 main div.poster {
   display: none;
 }
+
+@media only screen and (min-width: 768px) {
+
+  nav ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  nav ul li {
+    width: 30%;
+  }
+
+  main div.poster {
+    display: block;
+    height: 200px;
+  }
+
+  div.poster img {
+    object-fit: cover;
+  }
+
+  .store-button {
+    width: 35%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+
+  body {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
+    grid-template-areas:
+      ". header    header    nav   nav   ."
+      ". main      main      main  main  ."
+      ". order-now order-now store store .";
+    grid-gap: 10px;
+  }
+
+  nav {
+    align-self: end;
+  }
+
+  main {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+   main div.poster {
+     height: inherit;
+     margin-right: 10px;
+   }
+
+}
