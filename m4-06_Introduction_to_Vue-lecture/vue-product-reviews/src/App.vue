@@ -24,4 +24,8 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+<<<<<<< HEAD
 </style>
+=======
+</style>
+>>>>>>> 8b78e057775d418691169d51503e72c097c95e20

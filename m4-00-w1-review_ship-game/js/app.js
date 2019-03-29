@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('body').addEventListener('keyup', (event) => {
         if (event.key === 'ArrowRight') {
             moveShipRight();
+<<<<<<< HEAD
         }
         if (event.key === 'ArrowLeft') {
             moveShipLeft();
@@ -43,16 +44,64 @@ function moveShipUp() {
     const ship = getShipLocation();
     const up = getUpperOrLowerElementAtIndex(ship, ship.parentElement.previousElementSibling);
     moveShip(ship, up);
+=======
+        }    
+        if (event.key === 'ArrowLeft') {
+            moveShipLeft();
+        }
+        if (event.key === 'ArrowDown') {
+            moveShipDown();
+        }
+        if (event.key === 'ArrowUp') {
+            moveShipUp();
+        }
+    });
+});
+
+function moveShipUp() {
+    const ship = getShipLocation();
+    const up = getUpperOrLowerElementAtIndex(ship, ship.parentElement.previousElementSibling);
+    moveShip(ship, up);
+}
+
+function moveShipDown() {
+    const ship = getShipLocation();
+    const down = getUpperOrLowerElementAtIndex(ship, ship.parentElement.nextElementSibling);
+
+    moveShip(ship, down); 
+}
+
+function moveShipLeft() {
+    const ship = getShipLocation();
+    const left = ship.previousElementSibling;
+    
+    moveShip(ship, left);  
+}
+
+function moveShipRight() {
+    const ship = getShipLocation();
+    const right = ship.nextElementSibling;
+
+    moveShip(ship, right);  
+>>>>>>> 8b78e057775d418691169d51503e72c097c95e20
 }
 
 function moveShip(shipElement, newElement) {
     if (canMoveTo(shipElement, newElement)) {
         shipElement.classList.remove('boat');
+<<<<<<< HEAD
         newElement.classList.add('boat');
     }
 }
 
 function canMoveTo(newElement) {
+=======
+        newElement.classList.add('boat');  
+    }
+}
+
+function canMoveTo(shipElement, newElement) {
+>>>>>>> 8b78e057775d418691169d51503e72c097c95e20
     if (newElement == null || newElement.classList.contains('pirate')) {
         return false;
     }
@@ -71,9 +120,15 @@ function isWin(nextElement) {
 }
 
 function win() {
+<<<<<<< HEAD
     const winText = document.getElementById('.announce');
     winText.classList.add('winText');
     winText.innerText = 'BRO YOU FUCKIN DID IT';
+=======
+    const winText = document.querySelector('.announce');
+    winText.classList.add('winText');
+    winText.innerText = "You Win!";
+>>>>>>> 8b78e057775d418691169d51503e72c097c95e20
     getShipLocation().classList.remove('boat');
 }
 
@@ -97,9 +152,14 @@ function getIndexOfElement(element) {
 /**
  * Reset the Game
  */
+<<<<<<< HEAD
 
 function resetGame() {
     const frame = document.getElementById('frame');
+=======
+function resetGame() {
+    const frame  = document.getElementById('frame');
+>>>>>>> 8b78e057775d418691169d51503e72c097c95e20
     frame.firstElementChild.firstElementChild.classList.add('boat');
     frame.lastElementChild.lastElementChild.classList.add('treasure');
 }
@@ -107,7 +167,10 @@ function resetGame() {
 /**
  * Creates the game grid
  */
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8b78e057775d418691169d51503e72c097c95e20
 function createGrid() {
     const frame = document.getElementById('frame');
     // Add Code to create the game grid
@@ -123,10 +186,17 @@ function createGrid() {
  */
 
 function buildRow(frame) {
+<<<<<<< HEAD
     // Add code to create rows
     const row = document.createElement('div');
     row.classList.add('row');
     frame.insertAdjacentElement('beforeend', row);
+=======
+   // Add code to create rows
+   const row = document.createElement('div');
+   row.classList.add('row');
+   frame.insertAdjacentElement('beforeend', row);
+>>>>>>> 8b78e057775d418691169d51503e72c097c95e20
     for (let i = 0; i < 10 ; i++) {
         buildSquare(row, i); 
     }    
@@ -150,5 +220,13 @@ function buildSquare(row, count) {
             container.classList.add('pirate');
         } 
     }
+<<<<<<< HEAD
     row.insertAdjacentElement('beforeend', container)
 }
+=======
+    row.insertAdjacentElement('beforeend', container);
+}
+
+
+
+>>>>>>> 8b78e057775d418691169d51503e72c097c95e20
