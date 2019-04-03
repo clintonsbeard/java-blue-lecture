@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <search-bar></search-bar>
     <product-review
       name="Cigar Parties for Dummies"
       description="Host and plan the perfect cigar party for all of your squirrelly friends."
@@ -13,11 +14,13 @@
 
 <script>
 import ProductReview from './components/ProductReview.vue';
+import SearchBar from './components/SearchBar.vue';
 
 export default {
   name: 'app',
   components: {
-    ProductReview
+    ProductReview,
+    SearchBar
   },
   data() {
     return {
