@@ -1,0 +1,30 @@
+[
+    {
+        "username": "Mary Smith",
+        "avatar": "assets/img/user-1.png",
+        "title": "What a great product",
+        "publishedOn": "January 20, 2019 | 10:30 AM",
+        "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula risus a magna volutpat placerat. Maecenas a mauris tempor, eleifend mi id, ultricies quam. Praesent a neque a ligula consequat mattis euismod ut ligula. Etiam ipsum felis, rhoncus nec tristique a, mattis vitae lectus. Nam sollicitudin interdum magna, vel finibus velit iaculis ac. Donec vehicula vitae nulla quis malesuada. Maecenas iaculis, lacus nec feugiat mollis, nunc elit bibendum elit, quis dignissim odio justo et est."
+    },
+    {
+        "username": "John Smith",
+        "avatar": "assets/img/user-2.png",
+        "title": "I would recommend this product",
+        "publishedOn": "January 20, 2019 | 10:30 AM",
+        "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula risus a magna volutpat placerat. Maecenas a mauris tempor, eleifend mi id, ultricies quam. Praesent a neque a ligula consequat mattis euismod ut ligula. Etiam ipsum felis, rhoncus nec tristique a, mattis vitae lectus. Nam sollicitudin interdum magna, vel finibus velit iaculis ac. Donec vehicula vitae nulla quis malesuada. Maecenas iaculis, lacus nec feugiat mollis, nunc elit bibendum elit, quis dignissim odio justo et est."
+    },
+    {
+        "username": "Todd Smith",
+        "avatar": "assets/img/user-3.png",
+        "title": "I give it a 10 out of 10",
+        "publishedOn": "January 20, 2019 | 10:30 AM",
+        "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula risus a magna volutpat placerat. Maecenas a mauris tempor, eleifend mi id, ultricies quam. Praesent a neque a ligula consequat mattis euismod ut ligula. Etiam ipsum felis, rhoncus nec tristique a, mattis vitae lectus. Nam sollicitudin interdum magna, vel finibus velit iaculis ac. Donec vehicula vitae nulla quis malesuada. Maecenas iaculis, lacus nec feugiat mollis, nunc elit bibendum elit, quis dignissim odio justo et est."
+    },
+    {
+        "username": "Suzie Smith",
+        "avatar": "assets/img/user-4.png",
+        "title": "Exactly as advertised",
+        "publishedOn": "January 20, 2019 | 10:30 AM",
+        "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula risus a magna volutpat placerat. Maecenas a mauris tempor, eleifend mi id, ultricies quam. Praesent a neque a ligula consequat mattis euismod ut ligula. Etiam ipsum felis, rhoncus nec tristique a, mattis vitae lectus. Nam sollicitudin interdum magna, vel finibus velit iaculis ac. Donec vehicula vitae nulla quis malesuada. Maecenas iaculis, lacus nec feugiat mollis, nunc elit bibendum elit, quis dignissim odio justo et est."
+    }
+]

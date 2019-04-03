@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "Columbus",
+        "district": "Ohio",
+        "countryCode": "USA",
+        "population": 711470
+    },
+    {
+        "id": 2,
+        "name": "Cleveland",
+        "district": "Ohio",
+        "countryCode": "USA",
+        "population": 478403
+    },
+    {
+        "id": 3,
+        "name": "London",
+        "district": "England",
+        "countryCode": "GBR",
+        "population": 7285000
+    },
+    {
+        "id": 4,
+        "name": "Seoul",
+        "district": "Seoul",
+        "countryCode": "KOR",
+        "population": 9981619
+    },
+    {
+        "id": 5,
+        "name": "Tokyo",
+        "district": "Tokyo-to",
+        "countryCode": "JPN",
+        "population": 7980230
+    },
+    {
+        "id": 6,
+        "name": "Pittsburgh",
+        "district": "Pennsylvania",
+        "countryCode": "USA",
+        "population": 334563
+    },
+    {
+        "id": 7,
+        "name": "Detroit",
+        "district": "Michigan",
+        "countryCode": "USA",
+        "population": 951270
+    },
+    {
+        "id": 8,
+        "name": "Cincinnati",
+        "district": "Ohio",
+        "countryCode": "USA",
+        "population": 331285
+    }
+]
