@@ -27,7 +27,7 @@ export default {
   },
   data() {
     return {
-      API_URL: "YOUR_MOCK_API_REVIEWS_ENDPOINT_HERE",
+      API_URL: "http://5ca611963a08260014279226.mockapi.io/api/reviews",
       showAddProductForm: false,
       reviewID: 0
     }

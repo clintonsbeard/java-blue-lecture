@@ -45,10 +45,34 @@ export default {
       this.reviewID === 0 ? this.createReview() : this.updateReview();
     },
     createReview() {
-  
+      fetch(this.apiURL, {
+          method: 'POST',
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(this.review)
+        })
+        .then ( (response) => {
+          if (response.ok) {
+            this.$emit('showReviews');
+          }
+        })
+        .catch( err => console.error(err) );
     },
     updateReview() {
-
+      fetch(`${this.apiURL}/${this.reviewID}`, {
+          method: 'PUT',
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(this.review)
+        })
+        .then( response => {
+          if (response.ok) {
+            this.$emit('showReviews');
+          }
+        })
+        .catch( err => console.error(err) );
     }
   },
   computed: {
@@ -60,7 +84,16 @@ export default {
     }
   },
   created() {
-
+    if (this.reviewID != 0) {
+      fetch(this.apiURL + "/" + this.reviewID)
+        .then( response => {
+          return response.json();
+        })
+        .then( review => {
+          this.review = review;
+        })
+        .catch(err => console.error(err));
+    }
   }
 };
 </script>
