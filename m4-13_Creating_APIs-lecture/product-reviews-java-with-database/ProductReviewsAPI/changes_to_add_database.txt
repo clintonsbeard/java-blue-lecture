@@ -1,0 +1,24 @@
+Database Setup
+-----------------------------
+In the Directory with the reviews.sql file:
+    1. createdb -U postgres reviews
+    2. psql -U postgres -d reviews -f reviews.sql
+
+
+
+Java Project
+-----------------------------
+1. Added postgresql driver to pom.xml
+2. Replaced the existing Mock Dao classes with ones that connect to the Database
+3. Added DataSource Bean definition to springmvc-servlet.xml
+4. Updated the ProductReview JSON Annotation to a correct Data Format that is allowed by it's data type.  
+    This value was hardcoded until it needed to be pulled from the database - integration testing revealed the error.
+
+
+
+Product Reviews (Vue.js App)
+-----------------------------
+1. Update the API_URL
+    API_URL: "http://localhost:8080/product-reviews-api-with-database/api/reviews"
+
+

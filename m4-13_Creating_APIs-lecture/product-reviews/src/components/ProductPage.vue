@@ -27,7 +27,7 @@ export default {
   },
   data() {
     return {
-      API_URL: "YOUR_API_URL_HERE",
+      API_URL: "http://localhost:8080/product-reviews-api/api/reviews",
       showAddProductForm: false,
       reviewID: 0
     }
