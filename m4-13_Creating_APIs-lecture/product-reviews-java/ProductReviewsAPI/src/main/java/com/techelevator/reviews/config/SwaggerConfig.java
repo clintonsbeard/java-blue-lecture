@@ -15,7 +15,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableSwagger2
 @EnableWebMvc
-public class SwaggerConfig  extends WebMvcConfigurerAdapter {
+public class SwaggerConfig extends WebMvcConfigurerAdapter {
 	
    @Bean
    public Docket productApi() {
