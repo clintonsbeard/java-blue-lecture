@@ -10,6 +10,8 @@
     <link href="<c:url value="/css/site.css"/>" rel="stylesheet" type="text/css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous"></script>
    
+   	<script src="<c:url value="js/actor.js" />"></script>
+   
     <style type="text/css">
         label {
             display: block;
